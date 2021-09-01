@@ -1,0 +1,22 @@
+
+<div class="sidebar-wrapper">
+    <div class="logo">
+        <a href="" class="simple-text">
+            <div class="logo-img">
+            </div>
+            <img   height="60" width="75" src="https://kessentini.net/images/ISE_Logo-small.png"/>
+        </a>
+    </div>
+    <ul class="nav responsive-nav">
+       
+        
+       
+        <li routerLinkActive="active" *ngFor="let menuItem of menuItems" class="{{menuItem.class}}">
+            <a  [routerLink]="[menuItem.path]">
+                <i class="now-ui-icons {{menuItem.icon}}"></i>
+                <i class="now-ui-icons arrows-1_cloud-upload-94"></i>
+                <p>{{menuItem.title}}</p>
+            </a>
+        </li>
+    </ul>
+</div>

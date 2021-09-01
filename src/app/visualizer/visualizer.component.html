@@ -1,0 +1,44 @@
+<div class="container " style="margin:1em; background-color: gainsboro; width: auto; height: 1500px;">
+    <div class="row">
+    <br>
+        <div *ngFor="let node of nodes_info ; let i = index" class= "col-sm-3" style="margin-right:1em;">
+            <div style="width: 150px">
+            <img style="height: 20px" src="https://icons.iconarchive.com/icons/hopstarter/soft-scraps/256/Button-Blank-Green-icon.png">
+            <strong >&nbsp;&nbsp; {{node['name']}}  &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; Max({{node['Maxmem']}}W) </strong>
+        </div>
+            <div >
+            
+               <br>
+
+                <div class="card" style="background-color: cornflowerblue;">
+                    <div class="card-body">
+                    <div class="card-title"></div>
+                    <div class="card-text">
+                            
+                          <br>
+                           
+                        <div *ngFor="let con of node['containers'],let j = index" class="card" [style.border-color]="colors[color[j]]"  style="margin:1em;border: 5px solid;">
+                            <div class="card-body">
+                            <div class="card-title">  <span class="badge badge-light">{{node['priorities'][j]}}</span>  &nbsp;&nbsp;  <strong> {{con}} </strong> </div>
+                            <div class="card-text">
+                                <p style=" text-align: center;">
+                                    <br>
+                             <!--{{containers_power_consumption[i][j]}}w--> 
+                            </p>
+                              
+                              
+                              
+                            </div>
+                            </div>
+                        </div>
+                        <br>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+       
+        
+    </div>
+</div>
